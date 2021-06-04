@@ -8,9 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var feth = ApiServices()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            List{
+                ForEach(feth.datatotal, id: \.id){ a in
+                    HStack{
+                        Image(systemName: "rectangle")
+                        VStack(alignment: .leading){
+                            Text("\(a.name)")
+                                .font(.title)
+                                .fontWeight(.bold)
+                            Text("\(a.address)")
+                                .font(.callout)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        Spacer()
+                        HStack{
+                            Image(systemName: "heart")
+                                .foregroundColor(.red)
+                            Text("\(a.like)")
+                        }
+                        
+                    }
+                }
+            }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Travelist")
+            .navigationBarItems(trailing: Button(action: {}){
+                Image(systemName: "person.circle.fill")
+            })
+        }
+        
+       
     }
 }
 
