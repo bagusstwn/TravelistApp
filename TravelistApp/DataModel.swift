@@ -13,6 +13,13 @@ struct DataModel: Codable {
     let message: String
     let count: Int
     let places: [Place]
+    
+    enum CodingKeys: String, CodingKey{
+        case error = "error"
+        case message = "message"
+        case count = "count"
+        case places = "places"
+    }
 }
 
 // MARK: - Place
