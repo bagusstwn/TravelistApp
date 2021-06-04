@@ -11,7 +11,7 @@ struct RectangleBG: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .fill(Color.white)
-            .frame(width: 380, height: 93, alignment: .center)
+            .frame(maxWidth:  .infinity, alignment: .center)
             .shadow(color: Color.black.opacity(0.2), radius: 3, x: 2, y: 5)
             
             

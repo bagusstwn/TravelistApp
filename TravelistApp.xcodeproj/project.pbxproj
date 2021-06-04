@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F18372C266A26D800EF25AA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F18372B266A26D800EF25AA /* DetailView.swift */; };
 		0F5F09762669F22000B75824 /* RectangleBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F09752669F22000B75824 /* RectangleBG.swift */; };
 		0F5F0978266A02E800B75824 /* CustomRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */; };
 		0FFC38622668692200D977F2 /* TravelistAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC38612668692200D977F2 /* TravelistAppApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F18372B266A26D800EF25AA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0F5F09752669F22000B75824 /* RectangleBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBG.swift; sourceTree = "<group>"; };
 		0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedCorners.swift; sourceTree = "<group>"; };
 		0FFC385E2668692200D977F2 /* TravelistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			children = (
 				0FFC38612668692200D977F2 /* TravelistAppApp.swift */,
 				0FFC38632668692200D977F2 /* ContentView.swift */,
+				0F18372B266A26D800EF25AA /* DetailView.swift */,
 				0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */,
 				0F5F09752669F22000B75824 /* RectangleBG.swift */,
 				0FFC387026686AA200D977F2 /* DataModel.swift */,
@@ -153,6 +156,7 @@
 				0F5F09762669F22000B75824 /* RectangleBG.swift in Sources */,
 				0FFC38642668692200D977F2 /* ContentView.swift in Sources */,
 				0FFC38622668692200D977F2 /* TravelistAppApp.swift in Sources */,
+				0F18372C266A26D800EF25AA /* DetailView.swift in Sources */,
 				0FFC387326686B1200D977F2 /* ApiServices.swift in Sources */,
 				0FFC387126686AA200D977F2 /* DataModel.swift in Sources */,
 				0F5F0978266A02E800B75824 /* CustomRoundedCorners.swift in Sources */,
