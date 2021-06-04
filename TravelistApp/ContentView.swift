@@ -18,7 +18,7 @@ struct ContentView: View {
                     ZStack{
                         RectangleBG()
                         HStack{
-                            Image(systemName: "")
+                            Image(a.image)
                                 .frame(width: 93, height: 92, alignment: .center)
                                 .background(CustomRoundedCorners(color: Color.blue, tl: 20, tr: 0, bl: 20, br: 0))
                             
