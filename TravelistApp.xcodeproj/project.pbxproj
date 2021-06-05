@@ -19,7 +19,7 @@
 		0FFC38662668692400D977F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FFC38652668692400D977F2 /* Assets.xcassets */; };
 		0FFC38692668692400D977F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FFC38682668692400D977F2 /* Preview Assets.xcassets */; };
 		0FFC387126686AA200D977F2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC387026686AA200D977F2 /* DataModel.swift */; };
-		0FFC387326686B1200D977F2 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC387226686B1200D977F2 /* ApiServices.swift */; };
+		0FFC387326686B1200D977F2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC387226686B1200D977F2 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		0FFC38682668692400D977F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FFC386A2668692400D977F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FFC387026686AA200D977F2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		0FFC387226686B1200D977F2 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		0FFC387226686B1200D977F2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */,
 				0F5F09752669F22000B75824 /* RectangleBG.swift */,
 				0FFC387026686AA200D977F2 /* DataModel.swift */,
-				0FFC387226686B1200D977F2 /* ApiServices.swift */,
+				0FFC387226686B1200D977F2 /* NetworkManager.swift */,
 				0FFC38652668692400D977F2 /* Assets.xcassets */,
 				0FFC386A2668692400D977F2 /* Info.plist */,
 				0FFC38672668692400D977F2 /* Preview Content */,
@@ -172,7 +172,7 @@
 				0FFC38622668692200D977F2 /* TravelistAppApp.swift in Sources */,
 				0FD8DA22266A65FF0019FD41 /* CircleProfileImage.swift in Sources */,
 				0F18372C266A26D800EF25AA /* DetailView.swift in Sources */,
-				0FFC387326686B1200D977F2 /* ApiServices.swift in Sources */,
+				0FFC387326686B1200D977F2 /* NetworkManager.swift in Sources */,
 				0FFC387126686AA200D977F2 /* DataModel.swift in Sources */,
 				0FB60978266BA59D000DD8A5 /* IndicatorProgress.swift in Sources */,
 				0F5F0978266A02E800B75824 /* CustomRoundedCorners.swift in Sources */,

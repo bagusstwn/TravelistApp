@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var fetcData = ApiServices()
+    @ObservedObject var fetcData = NetworkManager()
     
     var body: some View {
         GeometryReader { geometry in
             NavigationView{
                 List{
-                    ForEach(fetcData.datatotal, id: \.id){ dataPlace in
+                    ForEach(fetcData.allDataPlace, id: \.id){ dataPlace in
                         ZStack{
                             RectangleBG()
                             HStack{

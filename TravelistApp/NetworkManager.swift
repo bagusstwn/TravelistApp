@@ -1,5 +1,5 @@
 //
-//  ApiServices.swift
+//  NetworkManager.swift
 //  TravelistApp
 //
 //  Created by Bagus setiawan on 03/06/21.
@@ -26,14 +26,14 @@ extension String{
     }
 }
 
-class ApiServices: ObservableObject{
+class NetworkManager: ObservableObject{
     
     @Published var isLoading = true
     private var url = "https://tourism-api.dicoding.dev/list"
     
     let objectWillChange = ObservableObjectPublisher()
     
-    @Published var datatotal  = [Place]() {
+    @Published var allDataPlace  = [Place]() {
         willSet {
             objectWillChange.send()
         }
@@ -54,7 +54,7 @@ class ApiServices: ObservableObject{
             if let result = result?.places{
                 self.isLoading = false
                 DispatchQueue.main.async {
-                    self.datatotal = result
+                    self.allDataPlace = result
                 }
             }
         }.resume()
