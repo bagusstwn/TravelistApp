@@ -9,11 +9,27 @@ import Foundation
 import SwiftUI
 import Combine
 
+extension String{
+    func loadImage() -> UIImage{
+        do{
+            guard let url = URL(string: self) else {
+                return UIImage()
+            }
+            
+            let data: Data = try Data(contentsOf: url)
+            
+            return UIImage(data: data) ?? UIImage()
+        }catch{
+            print("\(error.localizedDescription)")
+        }
+        return UIImage()
+    }
+}
+
 class ApiServices: ObservableObject{
     
+    @Published var isLoading = true
     private var url = "https://tourism-api.dicoding.dev/list"
-    
-    //@Published var showData = [Place]()
     
     let objectWillChange = ObservableObjectPublisher()
     
@@ -22,9 +38,6 @@ class ApiServices: ObservableObject{
             objectWillChange.send()
         }
     }
-    
-    @Published var isLoading = true
-    
     
     init() {
         guard let url = URL(string: url) else {
@@ -37,8 +50,8 @@ class ApiServices: ObservableObject{
             }
             
             let result = try? JSONDecoder().decode(DataModel.self, from: data)
-
-            if let result = result?.places {
+            
+            if let result = result?.places{
                 self.isLoading = false
                 DispatchQueue.main.async {
                     self.datatotal = result
@@ -46,35 +59,5 @@ class ApiServices: ObservableObject{
             }
         }.resume()
     }
-    
-    //  func getData(){
-    //        guard let url = URL(string: url) else {return}
-    //        URLSession.shared.dataTask(with: url) { (data, _, _) in
-    //            let users = try! JSONDecoder().decode([Place].self, from: data!)
-    //            print(users)
-    //
-    //            DispatchQueue.main.async {
-    //               self.showData = users
-    //            }
-    //        }
-    //        .resume()
-    //    }
-    
-    
-    
-    //    func getUsers(completion:@escaping (DataModel) -> ()) {
-    //           guard let url = URL(string: "https://tourism-api.dicoding.dev/list") else { return }
-    //           URLSession.shared.dataTask(with: url) { (data, _, _) in
-    //            let users = try! JSONDecoder().decode(DataModel.self, from: data!)
-    //            for a in users.places{
-    //                print(a.name)
-    //            }
-    //
-    //               DispatchQueue.main.async {
-    //                completion(users)
-    //               }
-    //           }
-    //           .resume()
-    //       }
 }
 
