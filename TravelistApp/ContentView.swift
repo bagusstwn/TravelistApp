@@ -19,9 +19,10 @@ struct ContentView: View {
                         ZStack{
                             RectangleBG()
                             HStack{
-                                Image(a.image)
+                                Image(uiImage: "\(a.image)".loadImage())
+                                    .resizable()
                                     .frame(width: 93, height: 92, alignment: .center)
-                                    .background(CustomRoundedCorners(color: Color.blue, tl: 20, tr: 0, bl: 20, br: 0))
+                                    .cornerRadius(10)
                                 
                                 VStack(alignment: .leading){
                                     Text("\(a.name)")
@@ -31,59 +32,48 @@ struct ContentView: View {
                                     Text("\(a.address)")
                                         .font(.callout)
                                         .foregroundColor(.secondary)
-                                        .lineLimit(1)
                                 }
-                                
                                 Spacer()
                                 HStack{
-                                    Image(systemName: "heart")
+                                    Image(systemName: "heart.fill")
                                         .foregroundColor(.red)
+                                        .padding([.top], 50)
                                     Text("\(a.like)")
+                                        .padding([.top], 50)
+                                        .padding([.trailing], 20)
                                 }
-                                .padding()
                             }
                         }
-                        .overlay(NavigationLink(destination: DetailView()){
+                        .overlay(NavigationLink(destination: DetailView(a: a)){
                             EmptyView()
                         }
                         .opacity(0)
                         )
                     }
+                    .padding([.leading, .trailing], 20)
+                    .padding([.bottom, .top], 10)
+                    .listRowInsets(EdgeInsets())
+                    .background(Color(UIColor.systemBackground))
+                    
                     if(feth.isLoading){
                         VStack{
-                            Indicator()
-                            Text("Please Wait...")
+                            IndicatorProgress()
                         }
                         .padding()
-                        .background(Color.white).cornerRadius(20).shadow(color: Color.secondary, radius: 20)
+                        .cornerRadius(20)
+                        
                         .frame(maxWidth: geometry.size.width * 10.0)
                         .offset(y: 200)
                     }
-                    
-                    
                 }
-                .listStyle(PlainListStyle())
-                .navigationTitle("Travelist")
-                .navigationBarItems(trailing: Button(action: {}){
-                    Image(systemName: "person.circle.fill")
-                        .frame(width: 50.0, height: 50.0)
-                        .font(.largeTitle)
-                })
                 
+                .listStyle(InsetListStyle())
+                .navigationTitle("Travelist")
+                .navigationBarItems(trailing: NavigationLink(destination: ProfileView()) {
+                    Image(systemName: "person.circle.fill")
+                        .font(.title)
+                })
             }
-        }
-        
-    }
-    
-    struct Indicator : UIViewRepresentable {
-        func makeUIView(context: UIViewRepresentableContext<Indicator>) -> UIActivityIndicatorView {
-            let indi = UIActivityIndicatorView(style: .large)
-            indi.color = UIColor.red
-            return indi
-        }
-        
-        func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<Indicator>) {
-            uiView.startAnimating()
         }
     }
 }
