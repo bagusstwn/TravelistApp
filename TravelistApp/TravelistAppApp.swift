@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct TravelistAppApp: App {
+    
+    //@StateObject var data = ApiServices()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -10,11 +10,9 @@ import SwiftUI
 struct RectangleBG: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
-            .fill(Color.white)
+            .fill(Color(UIColor(named: "cellBackground")!))
             .frame(maxWidth:  .infinity, alignment: .center)
-            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 2, y: 5)
-            
-            
+            .shadow(color: Color(UIColor(named: "shadow")!).opacity(0.2), radius: 3, x: 2, y: 5)    
     }
 }
 
