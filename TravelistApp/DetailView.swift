@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct DetailView: View {
-    var a: Place
+    var dataPlaces: Place
     
     var body: some View {
         ScrollView(.vertical){
             VStack{
-                    Image(uiImage: "\(a.image)".loadImage())
+                    Image(uiImage: "\(dataPlaces.image)".loadImage())
                         .resizable()
                         .frame(width: 365, height: 345)
                         .cornerRadius(20)
                 HStack{
-                    Text("\(a.address)")
+                    Text("\(dataPlaces.address)")
                         .font(.callout)
                         .foregroundColor(.secondary)
                         .padding([.leading], 20)
@@ -26,7 +26,7 @@ struct DetailView: View {
                     Image(systemName: "heart.fill")
                         .foregroundColor(.red)
                         .padding([.top], 20)
-                    Text("\(a.like)")
+                    Text("\(dataPlaces.like)")
                         .padding([.trailing, .top], 20)
                 }
                 Divider()
@@ -38,14 +38,14 @@ struct DetailView: View {
                         .padding([.leading], 20)
                         .padding([.bottom], 10)
                     Divider()
-                    Text("\(a.placeDescription)")
+                    Text("\(dataPlaces.placeDescription)")
                         .multilineTextAlignment(.leading)
                         .padding([.leading,.trailing], 20)
                     
                 }
             }
         }
-        .navigationTitle("\(a.name)")
+        .navigationTitle("\(dataPlaces.name)")
     }
 }
 

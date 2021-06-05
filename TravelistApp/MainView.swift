@@ -44,7 +44,7 @@ struct MainView: View {
                                 }
                             }
                         }
-                        .overlay(NavigationLink(destination: DetailView(a: dataPlace)){
+                        .overlay(NavigationLink(destination: DetailView(dataPlaces: dataPlace)){
                             EmptyView()
                         }
                         .opacity(0))
