@@ -51,6 +51,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FB60979266BCDC1000DD8A5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0FFC387226686B1200D977F2 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0FB6097A266BCDC7000DD8A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FFC38632668692200D977F2 /* MainView.swift */,
+				0F18372B266A26D800EF25AA /* DetailView.swift */,
+				0FD8DA1D266A63C90019FD41 /* ProfileView.swift */,
+				0FD8DA1F266A64460019FD41 /* MapKit.swift */,
+				0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */,
+				0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */,
+				0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */,
+				0F5F09752669F22000B75824 /* RectangleBG.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FB6097B266BCDD0000DD8A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FFC387026686AA200D977F2 /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0FFC38552668692200D977F2 = {
 			isa = PBXGroup;
 			children = (
@@ -70,17 +101,10 @@
 		0FFC38602668692200D977F2 /* TravelistApp */ = {
 			isa = PBXGroup;
 			children = (
+				0FB6097B266BCDD0000DD8A5 /* Model */,
+				0FB60979266BCDC1000DD8A5 /* Network */,
+				0FB6097A266BCDC7000DD8A5 /* View */,
 				0FFC38612668692200D977F2 /* TravelistAppApp.swift */,
-				0FFC38632668692200D977F2 /* MainView.swift */,
-				0FD8DA1D266A63C90019FD41 /* ProfileView.swift */,
-				0FD8DA1F266A64460019FD41 /* MapKit.swift */,
-				0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */,
-				0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */,
-				0F18372B266A26D800EF25AA /* DetailView.swift */,
-				0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */,
-				0F5F09752669F22000B75824 /* RectangleBG.swift */,
-				0FFC387026686AA200D977F2 /* DataModel.swift */,
-				0FFC387226686B1200D977F2 /* NetworkManager.swift */,
 				0FFC38652668692400D977F2 /* Assets.xcassets */,
 				0FFC386A2668692400D977F2 /* Info.plist */,
 				0FFC38672668692400D977F2 /* Preview Content */,
