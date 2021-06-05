@@ -23,8 +23,8 @@ struct DataModel: Codable {
 }
 
 // MARK: - Place
-struct Place: Codable {
-    let id: Int
+struct Place: Codable, Identifiable {
+    var id: Int
     let name, placeDescription, address: String
     let longitude, latitude: Double
     let like: Int
