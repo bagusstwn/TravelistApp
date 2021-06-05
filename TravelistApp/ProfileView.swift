@@ -23,7 +23,9 @@ struct ProfileView: View {
             }
             Divider()
             Spacer()
+            
         }
+        .navigationTitle("Profile")
     }
 }
 
