@@ -10,6 +10,7 @@
 		0F18372C266A26D800EF25AA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F18372B266A26D800EF25AA /* DetailView.swift */; };
 		0F5F09762669F22000B75824 /* RectangleBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F09752669F22000B75824 /* RectangleBG.swift */; };
 		0F5F0978266A02E800B75824 /* CustomRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */; };
+		0FB60978266BA59D000DD8A5 /* IndicatorProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */; };
 		0FD8DA1E266A63C90019FD41 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA1D266A63C90019FD41 /* ProfileView.swift */; };
 		0FD8DA20266A64460019FD41 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA1F266A64460019FD41 /* MapKit.swift */; };
 		0FD8DA22266A65FF0019FD41 /* CircleProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */; };
@@ -25,6 +26,7 @@
 		0F18372B266A26D800EF25AA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0F5F09752669F22000B75824 /* RectangleBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBG.swift; sourceTree = "<group>"; };
 		0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedCorners.swift; sourceTree = "<group>"; };
+		0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorProgress.swift; sourceTree = "<group>"; };
 		0FD8DA1D266A63C90019FD41 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0FD8DA1F266A64460019FD41 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 		0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProfileImage.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0FFC38632668692200D977F2 /* ContentView.swift */,
 				0FD8DA1D266A63C90019FD41 /* ProfileView.swift */,
 				0FD8DA1F266A64460019FD41 /* MapKit.swift */,
+				0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */,
 				0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */,
 				0F18372B266A26D800EF25AA /* DetailView.swift */,
 				0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */,
@@ -171,6 +174,7 @@
 				0F18372C266A26D800EF25AA /* DetailView.swift in Sources */,
 				0FFC387326686B1200D977F2 /* ApiServices.swift in Sources */,
 				0FFC387126686AA200D977F2 /* DataModel.swift in Sources */,
+				0FB60978266BA59D000DD8A5 /* IndicatorProgress.swift in Sources */,
 				0F5F0978266A02E800B75824 /* CustomRoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
