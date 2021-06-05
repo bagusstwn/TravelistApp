@@ -8,55 +8,44 @@
 import SwiftUI
 
 struct DetailView: View {
+    var a: Place
+    
     var body: some View {
         ScrollView(.vertical){
-                VStack{
-                    ZStack{
-                        Rectangle()
-                            .frame(width: 365, height: 345)
-                            .foregroundColor(.blue)
-                            .cornerRadius(20)
-                            .padding([.top, .leading, .trailing])
-                        Text("asasasas")
-                            .fontWeight(.bold)
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .position(x: 110, y: 330)
-                    }
-                    
-                    HStack{
-                        Text("Detusoko, Kabupaten Ende, NTT")
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                            .padding([.leading], 20)
-                        Spacer()
-                        Image(systemName: "heart")
-                            .foregroundColor(.red)
-                            .padding([.top], 20)
-                        Text("14")
-                            .padding([.trailing, .top], 20)
-                    }
+            VStack{
+                    Image(uiImage: "\(a.image)".loadImage())
+                        .resizable()
+                        .frame(width: 365, height: 345)
+                        .cornerRadius(20)
+                HStack{
+                    Text("\(a.address)")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                        .padding([.leading], 20)
+                    Spacer()
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                        .padding([.top], 20)
+                    Text("\(a.like)")
+                        .padding([.trailing, .top], 20)
+                }
+                Divider()
+                
+                VStack(alignment: .leading){
+                    Text("Deskripsi")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                        .padding([.leading], 20)
+                        .padding([.bottom], 10)
                     Divider()
+                    Text("\(a.placeDescription)")
+                        .multilineTextAlignment(.leading)
+                        .padding([.leading,.trailing], 20)
                     
-                    VStack(alignment: .leading){
-                        Text("Deskripsi")
-                            .padding([.leading], 20)
-                            .font(.headline)
-                        Text("""
-                            Taman Nasional Kelimutu terletak di Flores, Indonesia.Taman nasional ini terdiri dari bukit-bukit dan gunung-gunung dengan Gunung Kelibara (1.731 m) sebagai puncak tertinggi. Gunung Kelimutu, terdapat danau Danau tiga warna yang juga merupakan tempat dari Taman Nasional Kelimutu. Di dalam Taman Nasional Kelimutu, terdapat arboretum, hutan kecil seluas 4,5 hektare yang mewakili koleksi, Indonesia.Taman nasional ini terdiri dari bukit-bukit dan gunung-gunung dengan Gunung Kelibara (1.731 m) sebagai puncak tertinggi. Gunung Kelimutu, terdapat danau Danau tiga warna yang juga merupakan tempat dari Taman Nasional Kelimutu. Di dalam Taman Nasional Kelimutu, terdapat arboretum, hutan kecil seluas 4,5 hektare yang mewakili koleksi
-                        """)
-                            .multilineTextAlignment(.leading)
-                            .padding([.leading,.trailing], 20)
-                        
-                    }
                 }
             }
-            .navigationTitle("Detail")
+        }
+        .navigationTitle("\(a.name)")
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
