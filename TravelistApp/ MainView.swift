@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  TravelistApp
 //
 //  Created by Bagus setiawan on 03/06/21.
@@ -7,29 +7,29 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     
-    @ObservedObject var feth = ApiServices()
+    @ObservedObject var fetcData = ApiServices()
     
     var body: some View {
         GeometryReader { geometry in
             NavigationView{
                 List{
-                    ForEach(feth.datatotal, id: \.id){ a in
+                    ForEach(fetcData.datatotal, id: \.id){ dataPlace in
                         ZStack{
                             RectangleBG()
                             HStack{
-                                Image(uiImage: "\(a.image)".loadImage())
+                                Image(uiImage: "\(dataPlace.image)".loadImage())
                                     .resizable()
                                     .frame(width: 93, height: 92, alignment: .center)
                                     .cornerRadius(10)
                                 
                                 VStack(alignment: .leading){
-                                    Text("\(a.name)")
+                                    Text("\(dataPlace.name)")
                                         .font(.title2)
                                         .fontWeight(.bold)
                                         .lineLimit(1)
-                                    Text("\(a.address)")
+                                    Text("\(dataPlace.address)")
                                         .font(.callout)
                                         .foregroundColor(.secondary)
                                 }
@@ -38,24 +38,23 @@ struct ContentView: View {
                                     Image(systemName: "heart.fill")
                                         .foregroundColor(.red)
                                         .padding([.top], 50)
-                                    Text("\(a.like)")
+                                    Text("\(dataPlace.like)")
                                         .padding([.top], 50)
                                         .padding([.trailing], 20)
                                 }
                             }
                         }
-                        .overlay(NavigationLink(destination: DetailView(a: a)){
+                        .overlay(NavigationLink(destination: DetailView(a: dataPlace)){
                             EmptyView()
                         }
-                        .opacity(0)
-                        )
+                        .opacity(0))
                     }
                     .padding([.leading, .trailing], 20)
                     .padding([.bottom, .top], 10)
                     .listRowInsets(EdgeInsets())
                     .background(Color(UIColor.systemBackground))
                     
-                    if(feth.isLoading){
+                    if(fetcData.isLoading){
                         VStack{
                             IndicatorProgress()
                         }
@@ -80,6 +79,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
