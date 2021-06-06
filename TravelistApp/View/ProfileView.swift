@@ -10,8 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         VStack{
-            MapKit()
-                .frame(height: 300)
+            //MapKit()
+                //.frame(height: 300)
             CircleProfileImage()
                 .offset(y: -130)
                 .padding(.bottom, -130)

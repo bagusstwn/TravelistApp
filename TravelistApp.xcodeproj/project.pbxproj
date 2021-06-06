@@ -12,7 +12,7 @@
 		0F5F0978266A02E800B75824 /* CustomRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */; };
 		0FB60978266BA59D000DD8A5 /* IndicatorProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */; };
 		0FD8DA1E266A63C90019FD41 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA1D266A63C90019FD41 /* ProfileView.swift */; };
-		0FD8DA20266A64460019FD41 /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA1F266A64460019FD41 /* MapKit.swift */; };
+		0FD8DA20266A64460019FD41 /* LocationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA1F266A64460019FD41 /* LocationMap.swift */; };
 		0FD8DA22266A65FF0019FD41 /* CircleProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */; };
 		0FFC38622668692200D977F2 /* TravelistAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC38612668692200D977F2 /* TravelistAppApp.swift */; };
 		0FFC38642668692200D977F2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC38632668692200D977F2 /* MainView.swift */; };
@@ -28,7 +28,7 @@
 		0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedCorners.swift; sourceTree = "<group>"; };
 		0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorProgress.swift; sourceTree = "<group>"; };
 		0FD8DA1D266A63C90019FD41 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		0FD8DA1F266A64460019FD41 /* MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
+		0FD8DA1F266A64460019FD41 /* LocationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMap.swift; sourceTree = "<group>"; };
 		0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProfileImage.swift; sourceTree = "<group>"; };
 		0FFC385E2668692200D977F2 /* TravelistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFC38612668692200D977F2 /* TravelistAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelistAppApp.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				0FFC38632668692200D977F2 /* MainView.swift */,
 				0F18372B266A26D800EF25AA /* DetailView.swift */,
 				0FD8DA1D266A63C90019FD41 /* ProfileView.swift */,
-				0FD8DA1F266A64460019FD41 /* MapKit.swift */,
+				0FD8DA1F266A64460019FD41 /* LocationMap.swift */,
 				0FB60977266BA59D000DD8A5 /* IndicatorProgress.swift */,
 				0FD8DA21266A65FE0019FD41 /* CircleProfileImage.swift */,
 				0F5F0977266A02E800B75824 /* CustomRoundedCorners.swift */,
@@ -191,7 +191,7 @@
 			files = (
 				0FD8DA1E266A63C90019FD41 /* ProfileView.swift in Sources */,
 				0F5F09762669F22000B75824 /* RectangleBG.swift in Sources */,
-				0FD8DA20266A64460019FD41 /* MapKit.swift in Sources */,
+				0FD8DA20266A64460019FD41 /* LocationMap.swift in Sources */,
 				0FFC38642668692200D977F2 /* MainView.swift in Sources */,
 				0FFC38622668692200D977F2 /* TravelistAppApp.swift in Sources */,
 				0FD8DA22266A65FF0019FD41 /* CircleProfileImage.swift in Sources */,
