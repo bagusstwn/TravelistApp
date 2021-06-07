@@ -14,64 +14,63 @@ struct MainView: View {
     var body: some View {
         GeometryReader { geometry in
             NavigationView{
-                List{
-                    ForEach(fetcData.allDataPlace, id: \.id){ dataPlace in
-                        ZStack{
-                            RectangleBG()
-                            HStack{
-                                Image(uiImage: "\(dataPlace.image)".loadImage())
-                                    .resizable()
-                                    .frame(width: 93, height: 92, alignment: .center)
-                                    .cornerRadius(10)
-                                
-                                VStack(alignment: .leading){
-                                    Text("\(dataPlace.name)")
-                                        .font(.title2)
-                                        .fontWeight(.bold)
-                                        .lineLimit(1)
-                                    Text("\(dataPlace.address)")
-                                        .font(.callout)
-                                        .foregroundColor(.secondary)
-                                }
-                                Spacer()
+                ZStack{
+                    List{
+                        ForEach(fetcData.allDataPlace, id: \.id){ dataPlace in
+                            ZStack{
+                                RectangleBG()
                                 HStack{
-                                    Image(systemName: "heart.fill")
-                                        .foregroundColor(.red)
-                                        .padding([.top], 50)
-                                    Text("\(dataPlace.like)")
-                                        .padding([.top], 50)
-                                        .padding([.trailing], 20)
+                                    Image(uiImage: "\(dataPlace.image)".loadImage())
+                                        .resizable()
+                                        .frame(width: 93, height: 93, alignment: .center)
+                                        .cornerRadius(10)
+                                    
+                                    VStack(alignment: .leading){
+                                        Text("\(dataPlace.name)")
+                                            .font(.title2)
+                                            .fontWeight(.bold)
+                                            .lineLimit(1)
+                                        Text("\(dataPlace.address)")
+                                            .font(.callout)
+                                            .foregroundColor(.secondary)
+                                    }
+                                    Spacer()
+                                    HStack{
+                                        Image(systemName: "heart.fill")
+                                            .foregroundColor(.red)
+                                            .padding([.top], 50)
+                                        Text("\(dataPlace.like)")
+                                            .padding([.top], 50)
+                                            .padding([.trailing], 20)
+                                    }
                                 }
                             }
+                            .overlay(NavigationLink(destination: DetailView(dataPlaces: dataPlace)){
+                                EmptyView()
+                            }
+                            .opacity(0))
                         }
-                        .overlay(NavigationLink(destination: DetailView(dataPlaces: dataPlace)){
-                            EmptyView()
-                        }
-                        .opacity(0))
+                        .padding([.leading, .trailing], 20)
+                        .padding([.bottom, .top], 10)
+                        .listRowInsets(EdgeInsets())
+                        .background(Color(UIColor.systemBackground))
                     }
-                    .padding([.leading, .trailing], 20)
-                    .padding([.bottom, .top], 10)
-                    .listRowInsets(EdgeInsets())
-                    .background(Color(UIColor.systemBackground))
+                    
+                    .listStyle(InsetListStyle())
+                    .navigationTitle("Travelist")
+                    .navigationBarItems(trailing: NavigationLink(destination: ProfileView()) {
+                        Image(systemName: "person.circle.fill")
+                            .font(.title)
+                    })
                     
                     if(fetcData.isLoading){
-                        VStack{
+                        VStack(alignment: .center){
                             IndicatorProgress()
                         }
                         .padding()
                         .cornerRadius(20)
-                        
-                        .frame(maxWidth: geometry.size.width * 10.0)
-                        .offset(y: 200)
                     }
                 }
-                
-                .listStyle(InsetListStyle())
-                .navigationTitle("Travelist")
-                .navigationBarItems(trailing: NavigationLink(destination: ProfileView()) {
-                    Image(systemName: "person.circle.fill")
-                        .font(.title)
-                })
             }
         }
     }
