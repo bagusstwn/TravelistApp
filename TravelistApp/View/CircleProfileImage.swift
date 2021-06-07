@@ -10,8 +10,11 @@ import SwiftUI
 struct CircleProfileImage: View {
     var body: some View {
         Image("Bagus")
+            .resizable()
+            .scaledToFill()
+            .frame(width: 160, height: 160)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color.gray, lineWidth: 4))
+            .overlay(Circle().stroke(Color(UIColor(named: "circlePhotoList")!), lineWidth: 9))
             .shadow(radius: 7)
     }
 }
