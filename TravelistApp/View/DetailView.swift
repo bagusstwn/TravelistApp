@@ -14,7 +14,7 @@ struct DetailView: View {
     var body: some View {
         ScrollView(.vertical){
             VStack{
-                VStack(alignment: .leading){
+                
                     Image(uiImage: "\(dataPlaces.image)".loadImage())
                         .resizable()
                         .frame(width: 365, height: 345)
@@ -23,8 +23,7 @@ struct DetailView: View {
                     Text("\(dataPlaces.address)")
                         .font(.title3)
                         .foregroundColor(.secondary)
-                }
-    
+                        .padding([.leading, .trailing], 20)
                 Divider()
                 
                 HStack{
