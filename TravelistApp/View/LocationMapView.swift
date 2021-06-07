@@ -1,5 +1,5 @@
 //
-//  LocationMap.swift
+//  LocationMapView.swift
 //  TravelistApp
 //
 //  Created by Bagus setiawan on 04/06/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct LocationMap: UIViewRepresentable {
+struct LocationMapView: UIViewRepresentable {
     let dataPlaces: Place
     
     func makeUIView(context: Context) -> MKMapView {

@@ -9,16 +9,16 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var fetcData = NetworkManager()
+    @ObservedObject var fetchData = NetworkManager()
     
     var body: some View {
         GeometryReader { geometry in
             NavigationView{
                 ZStack{
                     List{
-                        ForEach(fetcData.allDataPlace, id: \.id){ dataPlace in
+                        ForEach(fetchData.allDataPlace, id: \.id){ dataPlace in
                             ZStack{
-                                RectangleBG()
+                                RectangleBackgroundView()
                                 HStack{
                                     Image(uiImage: "\(dataPlace.image)".loadImage())
                                         .resizable()
@@ -63,9 +63,9 @@ struct MainView: View {
                             .font(.title)
                     })
                     
-                    if(fetcData.isLoading){
+                    if(fetchData.isLoading){
                         VStack(alignment: .center){
-                            IndicatorProgress()
+                            IndicatorView()
                         }
                         .padding()
                         .cornerRadius(20)

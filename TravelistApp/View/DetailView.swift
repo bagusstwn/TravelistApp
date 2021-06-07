@@ -45,7 +45,7 @@ struct DetailView: View {
                     Spacer()
                     
                     VStack{
-                        NavigationLink(destination: LocationMap(dataPlaces: dataPlaces)){
+                        NavigationLink(destination: LocationMapView(dataPlaces: dataPlaces)){
                             Image(systemName: "location")
                                 .font(.title)
                         }
