@@ -42,7 +42,7 @@ struct DetailView: View {
                     }.frame(height: 75)
                     Spacer()
                     VStack{
-                        NavigationLink(destination: LocationMap(user: dataPlaces)){
+                        NavigationLink(destination: LocationMap(dataPlaces: dataPlaces)){
                             Image(systemName: "location")
                                 .font(.title)
                         }
