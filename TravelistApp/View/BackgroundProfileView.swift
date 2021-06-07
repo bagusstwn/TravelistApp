@@ -13,7 +13,7 @@ struct BackgroundProfileView: View {
             .renderingMode(.original)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 400, height: 100, alignment: .center)
+            .frame(width: 413, height: 100, alignment: .center)
     }
 }
 
