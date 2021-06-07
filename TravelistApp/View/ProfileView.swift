@@ -10,10 +10,10 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         VStack{
-            BackgorundProfile()
+            BackgroundProfileView()
                 .frame(height: 40, alignment: .center)
                 .offset(y: -25)
-            CircleProfileImage()
+            CircleProfileImageView()
             Text("Data Personal")
                 .font(.title)
                 .fontWeight(.bold)

@@ -1,5 +1,5 @@
 //
-//  CircleProfileImage.swift
+//  CircleProfileImageView.swift
 //  TravelistApp
 //
 //  Created by Bagus setiawan on 04/06/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleProfileImage: View {
+struct CircleProfileImageView: View {
     var body: some View {
         Image("Bagus")
             .resizable()
@@ -21,6 +21,6 @@ struct CircleProfileImage: View {
 
 struct CircleProfileImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleProfileImage()
+        CircleProfileImageView()
     }
 }

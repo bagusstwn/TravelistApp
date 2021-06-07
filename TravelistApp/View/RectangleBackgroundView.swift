@@ -1,5 +1,5 @@
 //
-//  RectangleBG.swift
+//  RectangleBackgroundView.swift
 //  TravelistApp
 //
 //  Created by Bagus setiawan on 04/06/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RectangleBG: View {
+struct RectangleBackgroundView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .fill(Color(UIColor(named: "cellBackground")!))
@@ -18,6 +18,6 @@ struct RectangleBG: View {
 
 struct RectangleBG_Previews: PreviewProvider {
     static var previews: some View {
-        RectangleBG()
+        RectangleBackgroundView()
     }
 }

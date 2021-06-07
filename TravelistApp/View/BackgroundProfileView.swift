@@ -1,5 +1,5 @@
 //
-//  BackgorundProfile.swift
+//  BackgroundProfileView.swift
 //  TravelistApp
 //
 //  Created by Bagus setiawan on 07/06/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BackgorundProfile: View {
+struct BackgroundProfileView: View {
     var body: some View {
         Image("profileBG")
             .renderingMode(.original)
@@ -19,6 +19,6 @@ struct BackgorundProfile: View {
 
 struct BackgorundProfile_Previews: PreviewProvider {
     static var previews: some View {
-        BackgorundProfile()
+        BackgroundProfileView()
     }
 }
