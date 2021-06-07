@@ -10,22 +10,40 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         VStack{
-            //MapKit()
-                //.frame(height: 300)
+            BackgorundProfile()
+                .frame(height: 40, alignment: .center)
+                .offset(y: -25)
             CircleProfileImage()
-                .offset(y: -130)
-                .padding(.bottom, -130)
-            VStack(alignment: .leading){
-                Text("Bagus Setiawan")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Text("Setiawanbagus4315@gmail.com")
+            Text("Data Personal")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.secondary)
+            Form{
+                HStack{
+                    Image(systemName: "person.circle")
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, 10)
+                    Text("Bagus Setiawan")
+                }
+                
+                HStack{
+                    Image(systemName: "envelope")
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, 10)
+                    Text("Setiawanbagus4315@gmail.com")
+                }
+                
+                HStack{
+                    Image(systemName: "phone.circle")
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, 10)
+                    Text("090897238298")
+                }
             }
-            Divider()
-            Spacer()
-            
         }
-        .navigationTitle("Profile")
+        
+        .navigationBarTitle(Text("Profile"))
+        
     }
 }
 
