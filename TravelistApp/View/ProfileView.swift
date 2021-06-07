@@ -37,7 +37,7 @@ struct ProfileView: View {
                     Image(systemName: "phone.circle")
                         .foregroundColor(.secondary)
                         .padding(.trailing, 10)
-                    Text("090897238298")
+                    Text("085223456247")
                 }
             }
         }

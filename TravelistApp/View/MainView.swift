@@ -36,7 +36,7 @@ struct MainView: View {
                                     }
                                     Spacer()
                                     HStack{
-                                        Image(systemName: "heart.fill")
+                                        Image(systemName: "heart")
                                             .foregroundColor(.red)
                                             .padding([.top], 50)
                                         Text("\(dataPlace.like)")
