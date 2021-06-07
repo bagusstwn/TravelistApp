@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - DataModel
 struct DataModel: Codable {
     let error: Bool
     let message: String
