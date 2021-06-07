@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct DetailView: View {
+    
     var dataPlaces: Place
     
     var body: some View {
         ScrollView(.vertical){
             VStack{
-                Image(uiImage: "\(dataPlaces.image)".loadImage())
-                    .resizable()
-                    .frame(width: 365, height: 345)
-                    .cornerRadius(20)
-                    .scaledToFill()
-                Text("\(dataPlaces.address)")
-                    .font(.title3)
-                    .foregroundColor(.secondary)
-                    .padding([.leading], 20)
-                
+                VStack(alignment: .leading){
+                    Image(uiImage: "\(dataPlaces.image)".loadImage())
+                        .resizable()
+                        .frame(width: 365, height: 345)
+                        .cornerRadius(20)
+                        .scaledToFill()
+                    Text("\(dataPlaces.address)")
+                        .font(.title3)
+                        .foregroundColor(.secondary)
+                }
+    
                 Divider()
                 
                 HStack{
@@ -49,6 +51,7 @@ struct DetailView: View {
                     .padding(.trailing, 75)
                     .padding([.top, .bottom], 5)
                 }
+                
                 Divider()
                 
                 VStack(alignment: .leading){
@@ -63,7 +66,6 @@ struct DetailView: View {
                     Text("\(dataPlaces.placeDescription)")
                         .multilineTextAlignment(.leading)
                         .padding([.leading,.trailing], 20)
-                    
                 }
             }
         }
