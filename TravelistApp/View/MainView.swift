@@ -13,19 +13,19 @@ struct MainView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationView{
-                ZStack{
-                    List{
-                        ForEach(fetchData.allDataPlace, id: \.id){ dataPlace in
-                            ZStack{
+            NavigationView {
+                ZStack {
+                    List {
+                        ForEach(fetchData.allDataPlace, id: \.id) { dataPlace in
+                            ZStack {
                                 RectangleBackgroundView()
-                                HStack{
+                                HStack {
                                     Image(uiImage: "\(dataPlace.image)".loadImage())
                                         .resizable()
                                         .frame(width: 93, height: 93, alignment: .center)
                                         .cornerRadius(10)
                                     
-                                    VStack(alignment: .leading){
+                                    VStack(alignment: .leading) {
                                         Text("\(dataPlace.name)")
                                             .font(.title2)
                                             .fontWeight(.bold)
@@ -34,8 +34,10 @@ struct MainView: View {
                                             .font(.callout)
                                             .foregroundColor(.secondary)
                                     }
+                                    
                                     Spacer()
-                                    HStack{
+                                    
+                                    HStack {
                                         Image(systemName: "heart")
                                             .foregroundColor(.red)
                                             .padding([.top], 50)
@@ -45,7 +47,7 @@ struct MainView: View {
                                     }
                                 }
                             }
-                            .overlay(NavigationLink(destination: DetailView(dataPlaces: dataPlace)){
+                            .overlay(NavigationLink(destination: DetailView(dataPlaces: dataPlace)) {
                                 EmptyView()
                             }
                             .opacity(0))
@@ -63,8 +65,8 @@ struct MainView: View {
                             .font(.title)
                     })
                     
-                    if(fetchData.isLoading){
-                        VStack(alignment: .center){
+                    if(fetchData.isLoading) {
+                        VStack(alignment: .center) {
                             IndicatorView()
                         }
                         .padding()

@@ -14,7 +14,7 @@ struct DataModel: Codable {
     let count: Int
     let places: [Place]
     
-    enum CodingKeys: String, CodingKey{
+    enum CodingKeys: String, CodingKey {
         case error = "error"
         case message = "message"
         case count = "count"
@@ -23,7 +23,7 @@ struct DataModel: Codable {
 }
 
 // MARK: - Place
-struct Place: Codable, Identifiable {
+struct Place: Codable {
     var id: Int
     let name, placeDescription, address: String
     let longitude, latitude: Double

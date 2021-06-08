@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension String{
-    func loadImage() -> UIImage{
-        do{
+extension String {
+    func loadImage() -> UIImage {
+        do {
             guard let url = URL(string: self) else {
                 return UIImage()
             }
@@ -19,21 +19,21 @@ extension String{
             let data: Data = try Data(contentsOf: url)
             
             return UIImage(data: data) ?? UIImage()
-        }catch{
+        }catch {
             print("\(error.localizedDescription)")
         }
         return UIImage()
     }
 }
 
-class NetworkManager: ObservableObject{
+class NetworkManager: ObservableObject {
     
     @Published var isLoading = true
     private var url = "https://tourism-api.dicoding.dev/list"
     
     let objectWillChange = ObservableObjectPublisher()
     
-    @Published var allDataPlace  = [Place]() {
+    @Published var allDataPlace = [Place]() {
         willSet {
             objectWillChange.send()
         }
@@ -51,9 +51,9 @@ class NetworkManager: ObservableObject{
             
             let result = try? JSONDecoder().decode(DataModel.self, from: data)
             
-            if let result = result?.places{
-                self.isLoading = false
+            if let result = result?.places {
                 DispatchQueue.main.async {
+                    self.isLoading = false
                     self.allDataPlace = result
                 }
             }

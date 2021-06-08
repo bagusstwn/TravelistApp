@@ -12,8 +12,8 @@ struct DetailView: View {
     var dataPlaces: Place
     
     var body: some View {
-        ScrollView(.vertical){
-            VStack{
+        ScrollView(.vertical) {
+            VStack {
                 Image(uiImage: "\(dataPlaces.image)".loadImage())
                     .resizable()
                     .frame(width: 365, height: 345)
@@ -26,8 +26,8 @@ struct DetailView: View {
                 
                 Divider()
                 
-                HStack{
-                    VStack{
+                HStack {
+                    VStack {
                         Image(systemName: "heart")
                             .foregroundColor(.red)
                             .font(.title)
@@ -44,8 +44,8 @@ struct DetailView: View {
                     
                     Spacer()
                     
-                    VStack{
-                        NavigationLink(destination: LocationMapView(dataPlaces: dataPlaces)){
+                    VStack {
+                        NavigationLink(destination: LocationMapView(dataPlaces: dataPlaces)) {
                             Image(systemName: "location")
                                 .font(.title)
                         }
@@ -57,8 +57,8 @@ struct DetailView: View {
                 
                 Divider()
                 
-                VStack(alignment: .leading){
-                    HStack{
+                VStack(alignment: .leading) {
+                    HStack {
                         Text("Deskripsi")
                             .font(.title2)
                             .fontWeight(.medium)

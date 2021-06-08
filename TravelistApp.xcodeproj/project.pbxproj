@@ -51,6 +51,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1A17F3266F446E0075F94F /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				0F256CAB266DA89300CFB710 /* BackgroundProfileView.swift */,
+				0FD8DA1F266A64460019FD41 /* LocationMapView.swift */,
+				0FB60977266BA59D000DD8A5 /* IndicatorView.swift */,
+				0FD8DA21266A65FE0019FD41 /* CircleProfileImageView.swift */,
+				0F5F09752669F22000B75824 /* RectangleBackgroundView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		0FB60979266BCDC1000DD8A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +77,7 @@
 				0FFC38632668692200D977F2 /* MainView.swift */,
 				0F18372B266A26D800EF25AA /* DetailView.swift */,
 				0FD8DA1D266A63C90019FD41 /* ProfileView.swift */,
-				0F256CAB266DA89300CFB710 /* BackgroundProfileView.swift */,
-				0FD8DA1F266A64460019FD41 /* LocationMapView.swift */,
-				0FB60977266BA59D000DD8A5 /* IndicatorView.swift */,
-				0FD8DA21266A65FE0019FD41 /* CircleProfileImageView.swift */,
-				0F5F09752669F22000B75824 /* RectangleBackgroundView.swift */,
+				0F1A17F3266F446E0075F94F /* ReusableViews */,
 			);
 			path = View;
 			sourceTree = "<group>";

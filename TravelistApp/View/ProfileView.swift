@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack{
+        VStack {
             BackgroundProfileView()
                 .frame(height: 40, alignment: .center)
                 .offset(y: -25)
@@ -18,22 +18,22 @@ struct ProfileView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.secondary)
-            Form{
-                HStack{
+            Form {
+                HStack {
                     Image(systemName: "person.circle")
                         .foregroundColor(.secondary)
                         .padding(.trailing, 10)
                     Text("Bagus Setiawan")
                 }
                 
-                HStack{
+                HStack {
                     Image(systemName: "envelope")
                         .foregroundColor(.secondary)
                         .padding(.trailing, 10)
                     Text("Setiawanbagus4315@gmail.com")
                 }
                 
-                HStack{
+                HStack {
                     Image(systemName: "phone.circle")
                         .foregroundColor(.secondary)
                         .padding(.trailing, 10)
