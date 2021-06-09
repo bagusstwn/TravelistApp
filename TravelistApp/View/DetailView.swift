@@ -63,7 +63,7 @@ struct DetailView: View {
                             .font(.title2)
                             .fontWeight(.medium)
                             .padding([.leading], 20)
-                            .padding([.bottom], 10)
+                            .padding([.bottom], 20)
                     }
                     
                     Text("\(dataPlaces.placeDescription)")
@@ -72,7 +72,8 @@ struct DetailView: View {
                 }
             }
         }
-        .navigationTitle("\(dataPlaces.name)")
+        .navigationBarTitle(Text("\(dataPlaces.name)"))
+        .padding(.bottom, 20)
     }
 }
 

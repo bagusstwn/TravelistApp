@@ -16,7 +16,7 @@ struct MainView: View {
             NavigationView {
                 ZStack {
                     List {
-                        ForEach(fetchData.allDataPlace, id: \.id) { dataPlace in
+                        ForEach(fetchData.allDataPlace) { dataPlace in
                             ZStack {
                                 RectangleBackgroundView()
                                 HStack {

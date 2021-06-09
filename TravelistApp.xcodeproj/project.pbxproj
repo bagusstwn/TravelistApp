@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0812F02670522A004F7250 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0812EF2670522A004F7250 /* LoadImage.swift */; };
 		0F18372C266A26D800EF25AA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F18372B266A26D800EF25AA /* DetailView.swift */; };
 		0F256CAC266DA89300CFB710 /* BackgroundProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F256CAB266DA89300CFB710 /* BackgroundProfileView.swift */; };
 		0F256CAE266DB6DD00CFB710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F256CAD266DB6DC00CFB710 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0812EF2670522A004F7250 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		0F18372B266A26D800EF25AA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0F256CAB266DA89300CFB710 /* BackgroundProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundProfileView.swift; sourceTree = "<group>"; };
 		0F256CAD266DB6DC00CFB710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				0FFC387226686B1200D977F2 /* NetworkManager.swift */,
+				0F0812EF2670522A004F7250 /* LoadImage.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				0F18372C266A26D800EF25AA /* DetailView.swift in Sources */,
 				0FFC387326686B1200D977F2 /* NetworkManager.swift in Sources */,
 				0FFC387126686AA200D977F2 /* DataModel.swift in Sources */,
+				0F0812F02670522A004F7250 /* LoadImage.swift in Sources */,
 				0F256CAC266DA89300CFB710 /* BackgroundProfileView.swift in Sources */,
 				0FB60978266BA59D000DD8A5 /* IndicatorView.swift in Sources */,
 			);
